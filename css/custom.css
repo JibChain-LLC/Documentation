@@ -1,0 +1,19 @@
+/* Adjust the size of the search bar */
+.md-header-nav__btn.md-icon {
+  font-size: 16px;
+  /* Adjust the icon size */
+}
+
+.md-search__input {
+  height: 30px;
+  /* Adjust the height */
+  font-size: 14px;
+  /* Adjust the font size */
+  padding: 5px 10px;
+  /* Adjust padding for a better fit */
+}
+
+.md-search__icon {
+  font-size: 18px;
+  /* Adjust the size of the search icon */
+}

@@ -1,0 +1,108 @@
+# Site Information
+site_name: JibChain PoC Documentation
+site_description: >
+  Comprehensive documentation for the JibChain Proof of Concept project,
+  detailing the architecture, services, and integration with IBM Watson.
+site_author: Your Name or Organization
+site_url: https://<your-username>.github.io/jibchain/  # Replace with your actual GitHub Pages URL if needed
+edit_uri: ""
+
+# Theme Configuration
+theme:
+  name: material
+  language: en
+  logo: "https://media.licdn.com/dms/image/C4E0BAQEoCtOC1nOHdw/company-logo_200_200/0/1644115097074/jibchain_logo?e=2147483647&v=beta&t=5-ADiR8dPsxgNabmhVszlFIIBMnecpCzaOZCOfrK9Aw"  # Custom logo URL
+  favicon: assets/favicon.ico  # Custom favicon path
+
+  # Theme Palette Configuration
+  palette:
+    - scheme: default
+      primary: 'black'  # Primary color (black)
+      accent: 'white'  # Accent color (white)
+      background: '#ffffff'  # White background for a clean look
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      primary: 'black'
+      accent: 'gray'  # Light gray accent for a softer contrast in dark mode
+      background: '#333333'  # Dark gray background for a sleek look
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+  # Theme Features
+  features:
+    - navigation.tabs  # Tabs for navigation
+    - navigation.instant  # Instant loading navigation
+    - header.autohide  # Auto-hide the header on scroll
+    - navigation.tracking  # Show navigation progress tracking
+    - toc.integrate  # Integrate table of contents in the sidebar
+
+  # Social Icons
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/your-repository/jibchain  # Replace with your actual repository link
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/your-profile  # Replace with your actual LinkedIn profile
+
+  # Customization
+  font:
+    text: "Arial"
+    code: "Courier New"
+
+# Custom CSS and JavaScript
+extra_css:
+  - css/custom.css  # Custom styles for adjusting search bar size
+
+extra_javascript:
+  - js/custom.js  # Custom scripts (if any)
+
+# Navigation Structure
+nav:
+  - Home: index.md
+  - Overview: overview.md
+  - Architecture:
+      - Components: components.md
+      - Services: services.md
+      - Data Flow: data-flow.md
+  - IBM Watson Integration: watson-integration.md
+  - API Reference: api-reference.md
+
+# Markdown Extensions
+markdown_extensions:
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - admonition  # Supports creating notes, warnings, etc.
+  - codehilite  # Syntax highlighting for code blocks
+  - toc:
+      permalink: true  # Adds permalinks to headers in TOC
+  - footnotes  # Adds footnote support in Markdown
+
+# Plugins Configuration
+plugins:
+  - search:
+      lang: en
+      separator: '[\s\-]+'
+      pipeline: 
+        - stemmer
+
+# Extra Configurations (Optional)
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/your-repository/jibchain  # Replace with your actual repository link
+  analytics:
+    provider: google
+    tracking_id: UA-XXXXXXXXX-X  # Your Google Analytics tracking ID
+
+# Google Analytics (Optional)
+# google_analytics:
+#   - UA-XXXXX-Y
+#   - auto
+
+# SEO Configuration (Optional)
+extra:
+  generator: false  # Disable 'Generated with MkDocs' in the HTML meta tag
+  description: "JibChain PoC Documentation - Comprehensive technical documentation."
